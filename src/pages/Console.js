@@ -5,6 +5,8 @@ import collapse from '../icons/collapse.svg';
 import {useState} from 'react';
 import SideNav from '../components/SideNav'
 import Placeholder from '../components/Placeholder'
+import Groups from '../components/Groups'
+
 
 
 
@@ -48,7 +50,7 @@ function Console() {
               (activenav === "Dashboard") && <Placeholder title="Dashboard" top={true}/>
             }
             {
-              (activenav === "Devices and Groups") && <Placeholder title="Devices and Groups"/>
+              (activenav === "Devices and Groups") && <Groups/>
             }
             {
               (activenav === "Test") && <Placeholder title="Test"/>

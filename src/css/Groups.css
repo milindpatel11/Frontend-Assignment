@@ -1,0 +1,26 @@
+.groups-content {
+  width: 95%;
+  height: 500px;
+  margin: auto;
+  justify-content: space-between;
+}
+
+.groups-content p {
+  width: 100%;
+  text-align: center;
+  padding-top: 10px;
+  font-weight: 800;
+}
+
+.groups {
+  width: 35%;
+  background-color: white;
+  border-radius: 5px
+}
+
+.devices {
+  width: 62%;
+  background-color: white;
+  border-radius: 5px
+
+}

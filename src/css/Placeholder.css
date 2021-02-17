@@ -15,7 +15,8 @@
   background-color: white;
   width: 95%;
   height: 500px;
-  margin: auto
+  margin: auto;
+  border-radius: 5px
 }
 
 .placeholder-content p {
