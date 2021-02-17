@@ -1,0 +1,132 @@
+.console {
+ height: 100vh;
+ align-items: center;
+ justify-content: center;
+ justify-content: stretch
+}
+
+.console-left {
+  background-color: grey;
+  max-width: 275px;
+  height: 100%;
+  background-color: rgb(46, 46, 75);
+
+}
+
+.console-logo{
+  background-color: rgb(20, 20, 24);
+  color: white;
+  align-items: center;
+  position: relative;
+  padding-left: 5px
+}
+
+
+.console-logo .logo {
+  height: 40px;
+  width: auto;
+}
+
+.logo-only {
+  height: 40px
+}
+
+.collapse {
+  height: 45px;
+  justify-content: center;
+  cursor: pointer;
+  transform: translateX(20px);
+  position: absolute;
+  right:0px
+}
+
+.collpase-rotate {
+  transform: rotate(180deg) translateX(-20px) translatey(5px);
+}
+
+
+.side-nav {
+  background-color: rgb(46, 46, 75);
+  min-width: 275px;
+  height: 100%;
+  transition: min-width .3s ease-in-out 0s;
+}
+
+.side-nav.collapsed {
+  background-color: rgb(46, 46, 75);
+  min-width: 60px;
+}
+
+.nav-item {
+  height: 50px;
+  padding: 10px 0;
+  align-items: center;
+  padding-left: 10px;
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  background-color: rgb(56, 56, 91);
+}
+
+.nav-item.active {
+  background-color: rgb(56, 56, 91);
+  border-left: 6px solid rgb(102, 209, 177);
+}
+
+.nav-item h4 {
+  padding-left: 10px;
+  color: white;
+  font-weight:400
+}
+
+.nav-item.active h4 {
+  color: rgb(102, 209, 177);
+  font-weight: 600;
+}
+
+.nav-item .hidden {
+  display: none
+}
+
+
+.console-right {
+  width: auto;
+  background-color: rgb(244, 246, 252);;
+  height: 100%;
+  width: 100%
+}
+
+.console-header {
+  width: 100%;
+  background-color: white;
+  height: 80px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.console-header h3{
+  margin-left: 40px
+}
+
+.header-right-group{
+  margin: auto 30px;
+
+}
+
+.console-header a{
+  padding: 5px 15px;
+  background-color: rgb(235, 235, 235);
+  text-decoration: none;
+  color: rgb(40, 40, 40);
+  border-radius: 3px
+}
+
+.console-content-top{
+  height: 60px;
+  align-items: center;
+}
+
+.console-content-bottom{
+  height: 100%
+}
