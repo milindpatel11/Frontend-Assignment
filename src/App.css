@@ -16,3 +16,37 @@ div {
   display: flex;
   flex-direction: row;
 }
+
+* {
+  margin: 0
+}
+
+button{
+  box-shadow: none;
+  min-width: 100%;
+  font-size: 22px;
+  height: 50px;
+  width: fit-content;
+  margin-top: 0px;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: rgba(50, 50, 93, 0.11) 0px 4px 6px, rgba(0, 0, 0, 0.08) 0px 1px 3px;
+}
+
+button.primary {
+  background-color: rgb(102, 78, 171);
+  color: rgb(255, 255, 255);
+  border: none
+}
+
+button.secondary {
+  background-color: rgb(255, 255, 255);
+  color: rgb(102, 78, 171);
+  border: 1px solid rgb(102, 78, 171)
+}
+
+button.tertiary {
+  background-color: #0052CC;
+  color: rgb(255, 255, 255);
+  border: 1px solid #0052CC;
+}

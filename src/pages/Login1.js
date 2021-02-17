@@ -1,9 +1,26 @@
 import '../css/Login1.css';
-import logo from '../images/Logo.svg'
-import singupbot from '../images/bot-signup.png'
+import logo from '../images/Logo.svg';
+import singupbot from '../images/bot-signup.png';
+import {useState} from 'react';
+import { useHistory } from 'react-router-dom';
 
 
-function Login1() {
+
+function Login1(props) {
+
+  const [endpoint, setEndPoint] = useState ("");
+  console.log(endpoint);
+  const history = useHistory();
+
+  const handleChange = (e) => {
+    setEndPoint(e.target.value)
+  }
+
+  const handleSubmit = () => {
+    history.push(`${endpoint}.esper.cloud/login`);
+    props.changeEndPoint(endpoint)
+  }
+
   return (
     <div className="login1 flex-row">
       <div className="login-left flex-column">
@@ -22,12 +39,12 @@ function Login1() {
             <h1 className="login-form-header"> LOGIN TO YOUR ESPER ACCOUNT </h1>
             <h4> Enter your unique endpoint name below and we'll take you to your account. You can then login with your Esper credentials. </h4>
             <div className="portal-url flex-row">
-              <input className="input-portal" placeholder='Endpoint Name'/>
+              <input className="input-portal" placeholder='Endpoint Name' onChange={handleChange}/>
               <h2> .esper.cloud </h2>
             </div>
             <div className="login-box flex-column">
               <a href="#"> Forgot Your Portal URL? </a>
-              <button className="primary"> Login </button>
+              <button className="primary" onClick={handleSubmit}> Login </button>
             </div>
             <div className="singup-box flex-column">
               <h3> OR </h3>
