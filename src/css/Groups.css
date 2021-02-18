@@ -8,7 +8,7 @@
 }
 
 .group-item:hover {
-  background-color: rgb(200,200,200)
+  background-color: rgb(235,235,235)
 }
 
 .group-item-indent-0 {
@@ -43,6 +43,38 @@
 .group-item h2 {
   margin: 0 12px;
   font-size: 28px
+}
+
+.group-item-square {
+  height: 30px;
+  width: 30px;
+  border-radius: 5px;
+  text-align: center;
+  padding: 5px
+}
+
+.item-square-0 {
+  background-color: rgb(215, 61, 50)
+}
+
+.item-square-1 {
+  background-color: rgb(66, 133, 244)
+}
+
+.item-square-2 {
+  background-color: rgb(103, 174, 63)
+}
+
+.item-square-3 {
+  background-color: rgb(214, 26, 127)
+}
+
+.item-square-4 {
+  background-color: rgb(255, 64, 128)
+}
+
+.item-square-5 {
+  background-color: rgb(126, 55, 148)
 }
 
 .group-description h5{

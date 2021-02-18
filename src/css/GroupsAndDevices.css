@@ -69,5 +69,18 @@
 .devices.expanded {
   width: 95%;
   margin-left: 10px;
+}
 
+.devices-header{
+  justify-content: space-between;
+  align-items: center;
+  height: 40px
+}
+
+.devices-header h4{
+  padding-left: 10px
+}
+
+.devices-main {
+  overflow-x: scroll
 }

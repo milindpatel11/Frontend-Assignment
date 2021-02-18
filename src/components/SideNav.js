@@ -4,12 +4,10 @@ import dashboard from '../icons/dashboard.svg';
 
 function SideNavItem (props) {
 
-  console.log(props.collapse);
-
   return (
     <div className={props.active ? "nav-item active flex-row" : "nav-item flex-row"} onClick={props.onClick}>
       <img src={props.icon} alt={props.alt} />
-      <h4 className={props.collapse && "hidden"} > 
+      <h4 className={props.collapse ? "hidden" : undefined} >
         {props.title}
       </h4>
     </div>

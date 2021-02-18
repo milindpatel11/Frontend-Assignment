@@ -1,0 +1,68 @@
+.devices-table-div {
+  margin-bottom: 20px;
+  padding: 10px
+}
+
+.devices-table{
+  border-collapse: collapse;
+  width: 100%;
+}
+
+
+thead tr {
+  border-bottom: 2px solid grey
+}
+
+tr th{
+  min-width: 150px;
+  text-align: left;
+  padding-left: 10px;
+  padding-bottom: 5px;
+  margin-bottom: 25px;
+  font-size: 14px
+}
+
+tr td{
+  text-align: left;
+  padding-left: 10px;
+  padding-top: 15px;
+  font-size: 12px
+}
+
+.device-name {
+  color: #0052CC
+}
+
+.alias-name {
+  display: flex;
+}
+
+.alias-name h4{
+  padding: 5px;
+  border-radius: 5px;
+  text-align: left;
+  background-color: rgb(235, 235, 235)
+}
+
+
+.online-offline h4{
+  max-width: 45px;
+  padding: 5px;
+  border-radius: 5px;
+  text-align: left;
+}
+
+.status-Online h4{
+  background-color: #36B37E
+}
+
+.status-Offline h4{
+  background-color: rgb(225, 225, 225)
+}
+
+.tags h4{
+  padding: 2px 4px;
+  margin-right: 5px;
+  border-radius: 5px;
+  background-color: rgb(225, 225, 225)
+}

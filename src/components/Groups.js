@@ -5,16 +5,17 @@ import {useState} from 'react';
 
 function GroupItem (props) {
 
-  const children = props.data.filter(item => (item.parent === props.item.path));
-  const has_children = children.length;
+  const children = props.data.filter(item => (item.parent && item.parent.split("/")[item.parent.split("/").length-2] === props.item.id));
+  const has_children = children.length > 0;
   const [groupitemexpand, setGroupItemExpand] = useState(false)
 
   return (
     <>
       <div className={`group-item group-item-indent-${props.indent} flex-row`}
-        style={{backgroundColor: (props.activegroup === props.item.name) && "rgb(200,200,200)"}}
+        style={{backgroundColor: (props.activegroup === props.item.name) && "rgb(235,235,235)"}}
         onClick={()=>props.changeActiveGroup(props.item.name)} >
 
+          <div className={`group-item-square item-square-${props.indent}`}> {props.indent} </div>
           {has_children ?
             <img className={groupitemexpand ? "item-expand-rotate" : "item-expand"}
             src={collapse} onClick={()=>setGroupItemExpand(!groupitemexpand)}/> :
@@ -34,7 +35,7 @@ function GroupItem (props) {
           <GroupItem data={props.data} item={item}
             indent={props.indent+1} expand={groupitemexpand}
             changeActiveGroup={props.changeActiveGroup}
-            activegroup={props.activegroup}/>
+            activegroup={props.activegroup} key={item.id}/>
         )
       }
       </div>
@@ -49,7 +50,7 @@ function Groups(props) {
 
   return (
     <>
-      <GroupItem data={data} item={data.filter(item => (item.path === "All Devices"))[0]}
+      <GroupItem data={data} item={data.filter(item => (item.path === "All devices"))[0]}
         indent={0} expand={true} activegroup={props.activegroup}
         changeActiveGroup={props.changeActiveGroup}/>
     </>
