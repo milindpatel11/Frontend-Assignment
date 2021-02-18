@@ -9,7 +9,7 @@ import { useHistory } from 'react-router-dom';
 function Login1(props) {
 
   const [endpoint, setEndPoint] = useState ("");
-  console.log(endpoint);
+  const [error, setEror] = useState (false);
   const history = useHistory();
 
   const handleChange = (e) => {
@@ -17,7 +17,12 @@ function Login1(props) {
   }
 
   const handleSubmit = () => {
-    history.push("login");
+    if (endpoint==="") {
+      setEror(true)
+    } else {
+      setEror(false)
+      history.push("login")
+    }
   }
 
   return (
@@ -41,6 +46,7 @@ function Login1(props) {
               <input className="input-portal" placeholder='Endpoint Name' onChange={handleChange}/>
               <h2> .esper.cloud </h2>
             </div>
+            {error && <h4 style={{color:"red"}}> Please enter valid input </h4>}
             <div className="login-box flex-column">
               <a href="#"> Forgot Your Portal URL? </a>
               <button className="primary" onClick={handleSubmit}> Login </button>

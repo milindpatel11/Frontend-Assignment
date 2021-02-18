@@ -9,6 +9,7 @@ function Login2(props) {
 
   const [username, setUserName] = useState ("");
   const [password, setPassword] = useState ("");
+  const [error, setEror] = useState (false);
   const history = useHistory();
 
 
@@ -20,8 +21,14 @@ function Login2(props) {
     }
   }
 
-  const handleSubmit = () => {
-    history.push("console");
+  const handleSubmit = (e) => {
+    if (username === "" || password === "") {
+      setEror(true)
+      e.preventDefault()
+    } else {
+      setEror(false)
+      history.push("console");
+    }
   }
 
   return (
@@ -33,6 +40,9 @@ function Login2(props) {
         <form className="login2-form flex-column">
           <input id="username" placeholder="Enter username" type="text" value={username} onChange={handleChange}/>
           <input id="password" placeholder="Enter password" type="password" value={password}  onChange={handleChange}/>
+          {
+            error && <h5 style={{color:"red"}}> Please type in both fields </h5>
+          }
           <button className="tertiary login2-button" onClick={handleSubmit}> Login </button>
         </form>
 
