@@ -21,7 +21,7 @@ function Login2(props) {
   }
 
   const handleSubmit = () => {
-    history.push(`console`);
+    history.push("console");
   }
 
   return (

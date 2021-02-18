@@ -17,8 +17,7 @@ function Login1(props) {
   }
 
   const handleSubmit = () => {
-    history.push(`${endpoint}.esper.cloud/login`);
-    props.changeEndPoint(endpoint)
+    history.push("login");
   }
 
   return (
