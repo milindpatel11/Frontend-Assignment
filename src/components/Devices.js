@@ -29,7 +29,9 @@ function Devices(props) {
   return (
     <>
       <div className="devices-table-div flex-row">
+
          <table className="devices-table">
+
             <thead>
                 <tr>
                   <th>Device Name </th>
@@ -42,14 +44,13 @@ function Devices(props) {
             </thead>
 
             <tbody>
-
               {
                 data.map( (item) => <tr key={item["Device ID"]}> <DeviceItem item={item}/> </tr>)
               }
-
             </tbody>
 
          </table>
+         
       </div>
     </>
 

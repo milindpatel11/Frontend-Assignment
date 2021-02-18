@@ -56,8 +56,8 @@ function Console() {
               (activenav === "Test") && <Placeholder title="Test"/>
             }
          </div>
+         
        </div>
-
 
     </div>
   );

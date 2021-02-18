@@ -15,12 +15,16 @@ function GroupItem (props) {
         style={{backgroundColor: (props.activegroup === props.item.name) && "rgb(235,235,235)"}}
         onClick={()=>props.changeActiveGroup(props.item.name)} >
 
-          <div className={`group-item-square item-square-${props.indent}`}> {props.indent} </div>
+          <div className={`group-item-square item-square-${props.indent}`}>
+            {props.indent}
+          </div>
+
           {has_children ?
             <img className={groupitemexpand ? "item-expand-rotate" : "item-expand"}
             src={collapse} onClick={()=>setGroupItemExpand(!groupitemexpand)}/> :
             <h2>  •   </h2>
           }
+
           <div className="flex-column group-description">
             <h5> {props.item.name} </h5>
             <h6> {props.item.path} </h6>
@@ -28,16 +32,16 @@ function GroupItem (props) {
 
       </div>
 
-      <div className="flex-column group-item-children"
-        style={{display: !groupitemexpand && 'none'}}>
-      {
-        children.map( (item) =>
-          <GroupItem data={props.data} item={item}
-            indent={props.indent+1} expand={groupitemexpand}
-            changeActiveGroup={props.changeActiveGroup}
-            activegroup={props.activegroup} key={item.id}/>
-        )
-      }
+
+      <div className="flex-column group-item-children">
+        { groupitemexpand &&
+          children.map( (item) =>
+            <GroupItem data={props.data} item={item}
+              indent={props.indent+1} expand={groupitemexpand}
+              changeActiveGroup={props.changeActiveGroup}
+              activegroup={props.activegroup} key={item.id}/>
+          )
+        }
       </div>
     </>
   )

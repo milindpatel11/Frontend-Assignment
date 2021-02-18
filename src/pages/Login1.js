@@ -28,14 +28,15 @@ function Login1(props) {
   return (
     <div className="login1 flex-row">
       <div className="login-left flex-column">
-        <a href={"#"}>
-          <img className="logo" alt="Esper Logo Linked" src={logo}/>
-        </a>
-        <img className="signup-bot" alt="Signup Bot Illustration" src={singupbot}/>
-        <div className="signup-group flex-column">
-          <h1> Don’t Have An Account? </h1>
-          <div className="signup-button"> Signup for Free! </div>
-        </div>
+          <a href={"#"}>
+              <img className="logo" alt="Esper Logo Linked" src={logo}/>
+          </a>
+          <img className="signup-bot" alt="Signup Bot Illustration" src={singupbot}/>
+          <div className="signup-group flex-column">
+              <h1> Don’t Have An Account? </h1>
+              <br/>
+              <div className="signup-button"> Signup for Free! </div>
+          </div>
       </div>
 
       <div className="login-right flex-row">

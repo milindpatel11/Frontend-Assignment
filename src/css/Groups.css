@@ -16,23 +16,23 @@
 }
 
 .group-item-indent-1 {
-  margin-left: 15px
+  margin-left: 20px
 }
 
 .group-item-indent-2 {
-  margin-left: 25px
-}
-
-.group-item-indent-3 {
   margin-left: 35px
 }
 
+.group-item-indent-3 {
+  margin-left: 50px
+}
+
 .group-item-indent-4 {
-  margin-left: 45px
+  margin-left: 65px
 }
 
 .group-item-indent-5 {
-  margin-left: 55px
+  margin-left: 70px
 }
 
 .group-item img {
@@ -50,7 +50,8 @@
   width: 30px;
   border-radius: 5px;
   text-align: center;
-  padding: 5px
+  padding: 5px;
+  color: white
 }
 
 .item-square-0 {
@@ -70,11 +71,11 @@
 }
 
 .item-square-4 {
-  background-color: rgb(255, 64, 128)
+  background-color: rgb(126, 55, 148)
 }
 
 .item-square-5 {
-  background-color: rgb(126, 55, 148)
+  background-color: rgb(255, 64, 128)
 }
 
 .group-description h5{

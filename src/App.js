@@ -13,12 +13,15 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Switch>
+
           <Route exact path="/">
               <Login1 />
           </Route>
+
           <Route exact path={"/login"}>
               <Login2 />
           </Route>
+
           <Route exact path={"/console"}>
               <Console />
           </Route>
