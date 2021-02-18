@@ -55,7 +55,8 @@
 
 .side-nav.collapsed {
   background-color: rgb(46, 46, 75);
-  min-width: 60px;
+  min-width: 55px;
+  max-width: 60px
 }
 
 .nav-item {
