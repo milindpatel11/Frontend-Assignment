@@ -46,10 +46,11 @@ tr td{
 
 
 .online-offline h4{
-  max-width: 45px;
+  max-width: 60px;
   padding: 5px;
   border-radius: 5px;
   text-align: left;
+  text-align:center;
 }
 
 .status-Online h4{
