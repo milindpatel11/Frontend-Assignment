@@ -1,26 +1,58 @@
-.groups-content {
-  width: 95%;
-  height: 500px;
-  margin: auto;
-  justify-content: space-between;
+.group-item {
+  align-items: center;
+  justify-content:flex-start;
+  padding: 3px 8px;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-right: 5px;
 }
 
-.groups-content p {
-  width: 100%;
-  text-align: center;
-  padding-top: 10px;
-  font-weight: 800;
+.group-item:hover {
+  background-color: rgb(200,200,200)
 }
 
-.groups {
-  width: 35%;
-  background-color: white;
-  border-radius: 5px
+.group-item-indent-0 {
+  margin-left: 5px
 }
 
-.devices {
-  width: 62%;
-  background-color: white;
-  border-radius: 5px
+.group-item-indent-1 {
+  margin-left: 15px
+}
 
+.group-item-indent-2 {
+  margin-left: 25px
+}
+
+.group-item-indent-3 {
+  margin-left: 35px
+}
+
+.group-item-indent-4 {
+  margin-left: 45px
+}
+
+.group-item-indent-5 {
+  margin-left: 55px
+}
+
+.group-item img {
+  height: 35px;
+  margin-top: 8px
+}
+
+.group-item h2 {
+  margin: 0 12px;
+  font-size: 28px
+}
+
+.group-description h5{
+  color: rgb(10, 10, 10);
+}
+
+.group-description h6{
+  color: rgb(150, 150, 150)
+}
+
+.item-expand-rotate {
+  transform: rotate(90deg) translateX(-5px);
 }
